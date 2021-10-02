@@ -1,9 +1,25 @@
 .characterEditor {
   padding-top: 128px;
   padding-bottom: 64px;
+  max-width: 1024px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .maxWidthWrapper {
+  display: inline-block;
+  width: 65%;
+
+}
+
+@media (max-width: 640px) {
+  .maxWidthWrapper {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
 }
 
 .header {
@@ -24,7 +40,24 @@
 }
 
 .characterWrapper {
+  width: 35%;
+  min-height: 500px;
+  display: inline-block;
+  position: fixed;
 }
 
-.controlColumn {
+@media (max-width: 640px) {
+  .characterWrapper {
+    height: 80%;
+    display: block;
+    position: fixed;
+    bottom: 10%;
+  }
+}
+
+@media (max-width: 640px) {
+  .controlColumn {
+    display: flex;
+    overflow: scroll;
+  }
 }

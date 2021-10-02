@@ -4,12 +4,23 @@
   padding-top: 18px;
   background-color: white;
   border-radius: 8px;
+  width:77%;
+  overflow-x: auto;
+  white-space: nowrap;
   /*
     HACK: Margin on an outer bound like this is
     a little gross, but we haven't seen the tools
     to deal with it yet!
   */
   margin-bottom: 32px;
+}
+
+@media (max-width: 640px) {
+  .controlPane {
+    max-width: 75%;
+    min-width: 75%;
+    margin-left: 16px;
+  }
 }
 
 .title {
